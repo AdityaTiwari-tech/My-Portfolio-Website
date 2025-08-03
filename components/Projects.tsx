@@ -47,7 +47,7 @@ export default function Projects() {
       category: 'Web Development',
       technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
       demoLink: '#',
-      githubLink: 'https://github.com/AdityaTiwari-tech/Portfolio-Website'
+      githubLink: 'https://github.com/AdityaTiwari-tech/My-Portfolio-Website'
     },
     
   ];
