@@ -104,7 +104,7 @@ export default function Contact() {
               <div className="flex space-x-4">
                 {[
                   { icon: 'ri-github-line', link: 'https://github.com/AdityaTiwari-tech', color: 'hover:bg-gray-600' },
-                  { icon: 'ri-linkedin-line', link: 'www.linkedin.com/in/aditya-tiwari-4454b9235', color: 'hover:bg-blue-600' },
+                  { icon: 'ri-linkedin-line', link: 'https://www.linkedin.com/in/aditya-tiwari-4454b9235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', color: 'hover:bg-blue-600' },
                   
                   { icon: 'ri-instagram-line', link: 'https://www.instagram.com/class_aditya/?utm_source=qr&igsh=eDVpY3loeDRyYzBk', color: 'hover:bg-pink-600' }
                 ].map((social, index) => (

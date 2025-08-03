@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               {[
                 { icon: 'ri-github-line', link: 'https://github.com/AdityaTiwari-tech', label: 'GitHub' },
-                { icon: 'ri-linkedin-line', link: 'www.linkedin.com/in/aditya-tiwari-4454b9235', label: 'LinkedIn' },
+                { icon: 'ri-linkedin-line', link: 'https://www.linkedin.com/in/aditya-tiwari-4454b9235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
                 
                 { icon: 'ri-mail-line', link: 'tiwariaditya15092005@gmail.com', label: 'Email' }
               ].map((social, index) => (
