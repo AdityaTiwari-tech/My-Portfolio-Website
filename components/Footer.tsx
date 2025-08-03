@@ -18,7 +18,7 @@ export default function Footer() {
                 { icon: 'ri-github-line', link: 'https://github.com/AdityaTiwari-tech', label: 'GitHub' },
                 { icon: 'ri-linkedin-line', link: 'https://www.linkedin.com/in/aditya-tiwari-4454b9235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn' },
                 
-                { icon: 'ri-mail-line', link: 'tiwariaditya15092005@gmail.com', label: 'Email' }
+                { icon: 'ri-mail-line', link: 'mailto:tiwariaditya15092005@gmail.com', label: 'Email' }
               ].map((social, index) => (
                 <a
                   key={index}
