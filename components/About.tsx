@@ -33,7 +33,7 @@ export default function About() {
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Experience</h3>
                 <p className="text-gray-600 text-sm">2+ Years Coding</p>
-                <p className="text-gray-600 text-sm">5 Projects Completed</p>
+                <p className="text-gray-600 text-sm">4 Projects Completed</p>
               </div>
             </div>
           </div>
