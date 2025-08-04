@@ -10,6 +10,7 @@
   "dependencies": {
     "@prisma/client": "^6.13.0",
     "@react-google-maps/api": "^2.19.3",
+    "mysql2": "^3.14.3",
     "next": "^15.4.5",
     "prisma": "^6.13.0",
     "react": "^19.0.0",
