@@ -1,15 +1,14 @@
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "mongodb"
+  url      = env(mongodb+srv://Aditya_tiwari:Adiksha@123@cluster0.4rr7imt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0)
 }
 
 generator client {
   provider = "prisma-client-js"
 }
 
-// Your models go below
 model Contact {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(auto()) @map("_id")
   name      String
   email     String
   subject   String
