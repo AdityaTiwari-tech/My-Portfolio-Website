@@ -236,4 +236,5 @@ export default function Contact() {
       </div>
     </section>
   );
+  console.log('submitStatus:', submitStatus);
 }
