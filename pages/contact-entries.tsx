@@ -1,14 +1,24 @@
 import { useEffect, useState } from 'react';
 
+type Entry = {
+  id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  createdAt: string;
+};
+
 export default function ContactEntries() {
-  const [entries, setEntries] = useState([]);
+  const [entries, setEntries] = useState<Entry[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('/api/contact-entries')
       .then(res => res.json())
       .then(data => {
-        setEntries(data);
+        console.log(data); // Check if this is an array
+        setEntries(Array.isArray(data) ? data : []);
         setLoading(false);
       })
       .catch(() => setLoading(false));

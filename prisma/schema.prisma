@@ -1,6 +1,6 @@
 datasource db {
   provider = "mongodb"
-  url      = env(mongodb+srv://Aditya_tiwari:Adiksha@123@cluster0.4rr7imt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0)
+  url      = env("mongodb+srv://Aditya_tiwari:Adiksha@123@cluster0.4rr7imt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 }
 
 generator client {
@@ -8,7 +8,7 @@ generator client {
 }
 
 model Contact {
-  id        String   @id @default(auto()) @map("_id")
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   email     String
   subject   String
