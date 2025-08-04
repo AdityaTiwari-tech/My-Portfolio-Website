@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -31,16 +30,25 @@ export default function Contact() {
 
   interface ContactFormEvent extends React.FormEvent<HTMLFormElement> {}
 
-  const handleSubmit = async (e: ContactFormEvent): Promise<void> => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitStatus(''), 3000);
-    }, 1000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch {
+      setSubmitStatus('error');
+    }
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
