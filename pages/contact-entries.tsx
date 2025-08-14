@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 type Entry = {
-  id: string;
+  id: number;
   name: string;
   email: string;
   subject: string;

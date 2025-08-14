@@ -28,7 +28,7 @@ export default function Contact() {
     message: string;
   }
 
-  interface ContactFormEvent extends React.FormEvent<HTMLFormElement> {}
+  //interface ContactFormEvent extends React.FormEvent<HTMLFormElement> {}
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,7 +45,8 @@ export default function Contact() {
       } else {
         setSubmitStatus('error');
       }
-    } catch {
+    } catch(error) {
+      console.error('Error submitting form:', error);
       setSubmitStatus('error');
     }
     setIsSubmitting(false);
@@ -236,5 +237,5 @@ export default function Contact() {
       </div>
     </section>
   );
-  console.log('submitStatus:', submitStatus);
+  
 }

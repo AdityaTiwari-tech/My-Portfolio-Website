@@ -69,8 +69,7 @@ export default function Projects() {
           
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
-              <button
-                key={category}
+              <button key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
                   activeCategory === category
