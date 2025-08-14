@@ -12,6 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
       res.status(200).json({ success: true, entry });
     } catch (error) {
+      console.error("Prisma contact create error:", error); 
       const errorMessage = typeof error === 'object' && error !== null && 'message' in error
         ? (error as { message: string }).message
         : 'An unknown error occurred';
